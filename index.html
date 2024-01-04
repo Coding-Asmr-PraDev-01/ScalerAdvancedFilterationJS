@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Scaler Advanced Filter</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+     <div class="main-container">
+          <div class="header">
+               <div class="logoBx">
+                    <img src="./imgs/scaler-logo.svg" alt="">
+               </div>
+               <nav class="main-nav" aria-label="main">
+                    <ul class="main-nav__list">
+                         <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Scaler Academy</a>
+                         </li>
+                         <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Scaler Data Science & ML</a>
+                         </li>
+                         <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">Events</a>
+                         </li>
+                         <li class="main-nav__item">
+                              <a href="#" class="main-nav__link">We're Hiring</a>
+                         </li>
+                    </ul>
+               </nav>
+
+               <div class="btnBx">
+                    <button class="btn btn--primary">Apply now</button>
+                    <button class="btn btn--outline">login</button>
+               </div>
+
+               <div class="menu-toggler">
+                    <span class="menu-toggler__bar"></span>
+                    <span class="menu-toggler__bar"></span>
+                    <span class="menu-toggler__bar"></span>
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+               </div>
+          </div>
+
+          <div class="sidebarMenu">
+               <div class="close-menu">
+                    <i class="fa-solid fa-xmark"></i>
+               </div>
+               <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                         <a href="#" class="main-nav__link">Scaler Academy</a>
+                    </li>
+                    <li class="main-nav__item">
+                         <a href="#" class="main-nav__link">Scaler Data Science & ML</a>
+                    </li>
+                    <li class="main-nav__item">
+                         <a href="#" class="main-nav__link">Events</a>
+                    </li>
+                    <li class="main-nav__item">
+                         <a href="#" class="main-nav__link">We're Hiring</a>
+                    </li>
+                    <li>
+                         <a href="#" class="btn btn--outline">Login</a>
+                    </li>
+               </ul>
+          </div>
+
+          <!-- Advanced Filter Box -->
+          <div class="advancedFilterBx">
+               <div class="topBx">
+                    <h3>Filters</h3>
+                    <button class="btn">Clear all filters</button>
+               </div>
+               <div class="middleBx">
+                    <div class="leftBx">
+                         <div class="tab active">
+                              <p>Pre Academy Segment</p>
+                         </div>
+                         <div class="tab">
+                              <p>Post Academy Segment</p>
+                         </div>
+                         <div class="tab">
+                              <p>College</p>
+                         </div>
+                         <div class="tab">
+                              <p>Branch</p>
+                         </div>
+                         <div class="tab">
+                              <p>Experience</p>
+                         </div>
+                         <div class="tab">
+                              <p>Growth</p>
+                         </div>
+                    </div>
+                    <div class="rightBx">
+                         <div class="tabContent" style="display: flex;" id="pre_academy_segment">
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Services
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id=""> Student/Fresher
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> SMB
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                         </div>
+                         
+                         <div class="tabContent" id="post_academy_segment">
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                         </div>
+
+                         <div class="tabContent" id="college">
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Services
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                         </div>
+
+                         <div class="tabContent" id="branch">
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Services
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id=""> Student/Fresher
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> SMB
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                         </div>
+
+                         <div class="tabContent" id="experience">
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Services
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id=""> Student/Fresher
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> High Growth Startups
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Tech Giants
+                              </label>
+                         </div>
+
+                         <div class="tabContent" id="growth">
+                              <label>
+                                   <input type="checkbox" name="" id="" /> Services
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="" id=""> Student/Fresher
+                              </label>
+                         </div>
+                    </div>
+               </div>
+               <div class="bottomBx">
+                    <button class="btn" data-btn="adv-filter-close">Close</button>
+                    <button class="btn">Apply Filters</button>
+               </div>
+          </div>
+
+          <div class="topbar">
+               <button class="btn btn--outline" data-btn="adv-filter-toggler">
+                    <i class="fa-solid fa-filter"></i> &nbsp; <span>Advanced Filters</span>
+               </button>
+               <div class="searchBx">
+                    <input type="text" placeholder="Search by college, city or company">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+               </div>
+          </div>
+          <div class="main-filterBx">
+               <div class="main-filterBx__leftBx">
+                    <!-- <div class="topbar">
+                         <button class="btn btn--outline">
+                              <i class="fa-solid fa-filter"></i> &nbsp; <span>Advanced Filters</span>
+                         </button>
+                    </div> -->
+                    <div class="bottomBar">
+                         <h3>Quick Filters</h3>
+                         <div class="filterBx">
+                              <p>New filters</p>
+                              <label>
+                                   <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                        data-filterValue="qna" /> &nbsp;
+                                   Q&A With Alumini
+                              </label>
+                         </div>
+                         <div class="filterBx">
+                              <p>Suggested filters</p>
+                              <label>
+                                   <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                        data-filterValue="tech-giants" /> &nbsp;
+                                   Tech Giants
+                              </label>
+                              <label>
+                                   <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                        data-filterValue="service-to-product" /> &nbsp;
+                                   Service to Product
+                              </label>
+                              <a href="#" class="view-btn">View More Filters</a>
+                              <div class="hiddenFiltersBx">
+                                   <label>
+                                        <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                             data-filterValue="service-to-tech-giants" /> &nbsp;
+                                        Service To Tech Giants
+                                   </label>
+                                   <label>
+                                        <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                             data-filterValue="service-to-product" /> &nbsp;
+                                        Service To Unicorn Startups
+                                   </label>
+                                   <label>
+                                        <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                             data-filterValue="service-to-tech-giants" /> &nbsp;
+                                        0 To 3 Years Experience
+                                   </label>
+                                   <label>
+                                        <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                             data-filterValue="service-to-product" /> &nbsp;
+                                        4 To 7 Years Experience
+                                   </label>
+                                   <label>
+                                        <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
+                                             data-filterValue="service-to-tech-giants" /> &nbsp;
+                                        Data Science & ML
+                                   </label>
+                                   <a href="#" class="view-btn">View Less Filters</a>
+                              </div>
+                         </div>
+
+                         <div class="hikePercentageBx">
+                              <h3>Salary Hike Percentage</h3>
+                              <p>Move the slider or type in the test box to get the filter by hike</p>
+                         </div>
+                         <div class="dualRangeSlider">
+                              fdsjflj
+                         </div>
+                    </div>
+
+
+
+               </div>
+               <div class="main-filterBx__rightBx">
+                    <div class="statsBx">
+                         <div class="statsBx__leftBx">
+                              <p>Find & Connect with</p>
+                              <h3>Scaler Alumni</h3>
+                         </div>
+                         <div class="statsBx__rightBx">
+                              <div class="box">
+                                   <img src="./imgs/like.svg" alt="">
+                                   <div>
+                                        <h4>1.7 Cr</h4>
+                                        <span>Highest Package</span>
+                                   </div>
+                              </div>
+                              <div class="box">
+                                   <img src="./imgs/money.svg" alt="">
+                                   <div>
+                                        <h4>126%</h4>
+                                        <span>Average Hike</span>
+                                   </div>
+                              </div>
+                              <div class="box">
+                                   <img src="./imgs/shop-bag.svg" alt="">
+                                   <div>
+                                        <h4>93.5%</h4>
+                                        <span>Placement Rate</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="candidatesCardContainer">
+
+                    </div>
+               </div>
+          </div>
+
+
+          <!-- Share Profile Container -->
+          <!-- <div class="shareProfileContainer">
+               <div class="topBx">
+                    <a href="#" class="share-link-btn">
+                         <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                         Share
+                    </a>
+                    <span><i class="fa-solid fa-xmark"></i></span>
+               </div>
+               <div class="topBar">
+                    <div class="imgBx userImgBx">
+                         <img src=${data.img} alt="">
+                    </div>
+                    <div class="contentBx">
+                         <h2 class="name">${data.name}</h2>
+                         <p><i class="fa-solid fa-briefcase"></i> <span>${data.role}</span>
+                         </p>
+                         <p><i class="fa-solid fa-location-dot"></i> <span>${data.location}</span></p>
+                         <button class="share-btn">
+                              <img src="./imgs/companies-icons/linkedin.svg" alt="">
+                              <span>Connect</span>
+                         </button>
+                    </div>
+                    <div class="qnaBx">
+                         <h2>Ask Questions</h2>
+                         <p>Now you can get a private Q&A ${data.name}. This will help you get career advice, industry insights, and more.</p>
+                         <div>
+                              <span>
+                                   <img src="./imgs/star.svg" alt="">
+                                   <b>Know their Journey</b>
+                              </span>
+                              <span>
+                                   <img src="./imgs/people.svg" alt="">
+                                   <b>Build your network</b>
+                              </span>
+                         </div>
+                         <button class="chat-btn">
+                              <img src="./imgs/chatIcon.svg" alt="">
+                              <span>Start Private Q&A</span>
+                         </button>
+                    </div>
+                    <div class="bottomBar">
+                         <div class="leftBx">
+                              <p class="secondary-heading">Pre Scaler</p>
+                              <p>Adobe</p>
+                         </div>
+                         <div class="rightBx">
+                              <img src="./imgs/arrow.svg" alt="">
+                              <div>
+                                   <p class="secondary-heading">Post Scaler</p>
+                                   <p>
+                                        <img class="company-icon" src=${data.fromCompany}
+                                             alt="">
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="reviewBx">
+                         <h2>Reviews and Blogs</h2>
+                         <p>One of the decisions I take pride in is investing in myself. I am sure you can relate when I say that you actually don’t feel like spending hefty amounts when it comes to yourself. At least that was the case for me when I came across this opportunity of an amazing (but of course, expensive) course of Scaler. But I am so glad that I invested in it and ultimately in my own growth....</p>
+                         <button class="share-btn">
+                              <img src="./imgs/companies-icons/linkedin.svg" alt="">
+                              <span>Connect</span>
+                         </button>
+                    </div>
+               </div>
+               
+          </div> -->
+
+          <div class="loginBxContainer">
+               <form action="">
+                    <p>Ready to become a <b>Rockstar Developer</b></p>
+                    <div class="inputBx">
+                         <h3>Full Name <sup>*</sup></h3>
+                         <input type="text" placeholder="Enter your name" />
+                    </div>
+                    <div class="inputBx">
+                         <h3>Email <sup>*</sup></h3>
+                         <input type="text" placeholder="Enter your email" />
+                    </div>
+                    <div class="inputBx">
+                         <h3>Phone Number <sup>*</sup></h3>
+                         <p class="faint-text">OTP will be sent to this number for verification</p>
+                         <div class="inputBx ">
+                              <select name="" id="">
+                                   <option value="91">+91</option>
+                                   <option value="92">+92</option>
+                              </select>
+                              <input type="number" placeholder="Enter your mobile number">
+                         </div>
+                    </div>
+                    <div class="inputBx">
+                         <h3>Graduation Year <sup>*</sup></h3>
+                         <input type="number" placeholder="Year of Graduation" >
+                    </div>
+                    <div class="inputBx">
+                         <h3>Your Topic of Interest <sup>*</sup></h3>
+                         <label>
+                              <input type="radio" value="software-development" name="profession">
+                              Software Develpment
+                         </label>
+                         <label>
+                              <input type="radio" value="data-science-n-ml" name="profession">
+                              Data Science & ML
+                         </label>
+                    </div>
+                    <button class="signup-btn">
+                         Sign up
+                    </button>
+                    <p>Already a member? <a href="#">Log in</a></p>
+                    <div class="orBx">
+                         <span class="line"></span>
+                         <p>OR</p>
+                         <span class="line"></span>
+                    </div>
+                    <div class="socialMediaBx">
+                         <p>Log in using</p>
+                         <div class="iconBx">
+                              
+                         </div>
+                         <div class="iconBx">
+                              <img src="./imgs/companies-icons/facebook-icon.png" alt="">
+                         </div>
+                         <div class="iconBx">
+                              <img src="./imgs/companies-icons/linkedin-logo.png" alt="">
+                         </div>
+                         <div class="iconBx">
+                              <img src="./imgs/companies-icons/github-logo.png" alt="">
+                         </div>
+                         <div class="iconBx">
+                              <img src="./imgs/companies-icons/google-icon.png" alt="">
+                         </div>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <script defer src="./script.js"></script>
+</body>
+
+</html>
