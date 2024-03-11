@@ -36,7 +36,7 @@
 
                <div class="btnBx">
                     <button class="btn btn--primary">Apply now</button>
-                    <button class="btn btn--outline">login</button>
+                    <button class="btn btn--outline login-btn">login</button>
                </div>
 
                <div class="menu-toggler">
@@ -65,7 +65,7 @@
                          <a href="#" class="main-nav__link">We're Hiring</a>
                     </li>
                     <li>
-                         <a href="#" class="btn btn--outline">Login</a>
+                         <a href="#" class="btn btn--outline login-btn">Login</a>
                     </li>
                </ul>
           </div>
@@ -231,11 +231,11 @@
                                         data-filterValue="tech-giants" /> &nbsp;
                                    Tech Giants
                               </label>
-                              <label>
+                              <!-- <label>
                                    <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
                                         data-filterValue="service-to-product" /> &nbsp;
                                    Service to Product
-                              </label>
+                              </label> -->
                               <a href="#" class="view-btn">View More Filters</a>
                               <div class="hiddenFiltersBx">
                                    <label>
@@ -245,22 +245,22 @@
                                    </label>
                                    <label>
                                         <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
-                                             data-filterValue="service-to-product" /> &nbsp;
+                                             data-filterValue="service-to-startups" /> &nbsp;
                                         Service To Unicorn Startups
                                    </label>
                                    <label>
                                         <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
-                                             data-filterValue="service-to-tech-giants" /> &nbsp;
+                                             data-filterValue="experience-0-3" /> &nbsp;
                                         0 To 3 Years Experience
                                    </label>
                                    <label>
                                         <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
-                                             data-filterValue="service-to-product" /> &nbsp;
+                                             data-filterValue="experience-4-7" /> &nbsp;
                                         4 To 7 Years Experience
                                    </label>
                                    <label>
                                         <input type="checkbox" name="filter-checkbox" id="filter-checkbox"
-                                             data-filterValue="service-to-tech-giants" /> &nbsp;
+                                             data-filterValue="data-science-ml" /> &nbsp;
                                         Data Science & ML
                                    </label>
                                    <a href="#" class="view-btn">View Less Filters</a>
@@ -318,76 +318,12 @@
 
 
           <!-- Share Profile Container -->
-          <!-- <div class="shareProfileContainer">
-               <div class="topBx">
-                    <a href="#" class="share-link-btn">
-                         <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                         Share
-                    </a>
-                    <span><i class="fa-solid fa-xmark"></i></span>
-               </div>
-               <div class="topBar">
-                    <div class="imgBx userImgBx">
-                         <img src=${data.img} alt="">
-                    </div>
-                    <div class="contentBx">
-                         <h2 class="name">${data.name}</h2>
-                         <p><i class="fa-solid fa-briefcase"></i> <span>${data.role}</span>
-                         </p>
-                         <p><i class="fa-solid fa-location-dot"></i> <span>${data.location}</span></p>
-                         <button class="share-btn">
-                              <img src="./imgs/companies-icons/linkedin.svg" alt="">
-                              <span>Connect</span>
-                         </button>
-                    </div>
-                    <div class="qnaBx">
-                         <h2>Ask Questions</h2>
-                         <p>Now you can get a private Q&A ${data.name}. This will help you get career advice, industry insights, and more.</p>
-                         <div>
-                              <span>
-                                   <img src="./imgs/star.svg" alt="">
-                                   <b>Know their Journey</b>
-                              </span>
-                              <span>
-                                   <img src="./imgs/people.svg" alt="">
-                                   <b>Build your network</b>
-                              </span>
-                         </div>
-                         <button class="chat-btn">
-                              <img src="./imgs/chatIcon.svg" alt="">
-                              <span>Start Private Q&A</span>
-                         </button>
-                    </div>
-                    <div class="bottomBar">
-                         <div class="leftBx">
-                              <p class="secondary-heading">Pre Scaler</p>
-                              <p>Adobe</p>
-                         </div>
-                         <div class="rightBx">
-                              <img src="./imgs/arrow.svg" alt="">
-                              <div>
-                                   <p class="secondary-heading">Post Scaler</p>
-                                   <p>
-                                        <img class="company-icon" src=${data.fromCompany}
-                                             alt="">
-                                   </p>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="reviewBx">
-                         <h2>Reviews and Blogs</h2>
-                         <p>One of the decisions I take pride in is investing in myself. I am sure you can relate when I say that you actually don’t feel like spending hefty amounts when it comes to yourself. At least that was the case for me when I came across this opportunity of an amazing (but of course, expensive) course of Scaler. But I am so glad that I invested in it and ultimately in my own growth....</p>
-                         <button class="share-btn">
-                              <img src="./imgs/companies-icons/linkedin.svg" alt="">
-                              <span>Connect</span>
-                         </button>
-                    </div>
-               </div>
+          <div class="shareProfileContainer"> 
                
-          </div> -->
+          </div> 
 
           <div class="loginBxContainer">
+               <i class="fa-solid fa-xmark close-login-form"></i>
                <form action="">
                     <p>Ready to become a <b>Rockstar Developer</b></p>
                     <div class="inputBx">
@@ -401,7 +337,7 @@
                     <div class="inputBx">
                          <h3>Phone Number <sup>*</sup></h3>
                          <p class="faint-text">OTP will be sent to this number for verification</p>
-                         <div class="inputBx ">
+                         <div class="wrapper ">
                               <select name="" id="">
                                    <option value="91">+91</option>
                                    <option value="92">+92</option>
@@ -427,7 +363,7 @@
                     <button class="signup-btn">
                          Sign up
                     </button>
-                    <p>Already a member? <a href="#">Log in</a></p>
+                    <p class="login-text">Already a member? <a href="#">Log in</a></p>
                     <div class="orBx">
                          <span class="line"></span>
                          <p>OR</p>
@@ -435,21 +371,21 @@
                     </div>
                     <div class="socialMediaBx">
                          <p>Log in using</p>
-                         <div class="iconBx">
-                              
+                         <div>
+                              <div class="iconBx">
+                                   <img src="./imgs/companies-icons/facebook-icon.png" alt="">
+                              </div>
+                              <div class="iconBx">
+                                   <img src="./imgs/companies-icons/linkedin-logo.png" alt="">
+                              </div>
+                              <div class="iconBx">
+                                   <img src="./imgs/companies-icons/github-logo.png" alt="">
+                              </div>
+                              <div class="iconBx">
+                                   <img src="./imgs/companies-icons/google-icon.png" alt="">
+                              </div>
                          </div>
-                         <div class="iconBx">
-                              <img src="./imgs/companies-icons/facebook-icon.png" alt="">
-                         </div>
-                         <div class="iconBx">
-                              <img src="./imgs/companies-icons/linkedin-logo.png" alt="">
-                         </div>
-                         <div class="iconBx">
-                              <img src="./imgs/companies-icons/github-logo.png" alt="">
-                         </div>
-                         <div class="iconBx">
-                              <img src="./imgs/companies-icons/google-icon.png" alt="">
-                         </div>
+                         
                     </div>
                </form>
           </div>
