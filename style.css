@@ -22,9 +22,77 @@ html{
      overflow-x: hidden;
 }
 
+/* Resuable Style Classes */
+.userImgBx{
+     position: relative;
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     overflow: hidden;
+     /* border: 2px solid red; */
+}
+
+.userImgBx img{
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+}
+
+
+.contentBx{
+     display: flex;
+     flex-direction: column;
+     gap: 0.4rem;
+}
+
+.contentBx .name{
+     white-space: nowrap;
+     font-size: 2.3rem;
+}
+
+.contentBx p{
+     font-size: 1.3rem;
+     color: rgba(0, 0, 0, 0.7);
+}
+
+.company-transition-bx{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.company-transition-bx .leftBx p:not(.secondary-heading){
+     font-weight: 600;
+     font-size: 1.3rem;
+     white-space: nowrap;
+}
+
+.company-transition-bx .rightBx {
+     display: flex;
+     align-items: center;
+     gap: 1.7rem;
+}
+
+.company-transition-bx .rightBx img{
+     width: 50px;
+}
+
+.company-transition-bx .secondary-heading{
+     font-size: 1.3rem;
+}
+
 body{
+     width: 100vw;
+     height: 100vh;
      font-family: "Poppins", sans-serif;
      background-color: var(--body-bg-color);
+     overflow-x: hidden;
+}
+
+body.active{
+     /* overflow-y: hidden; */
 }
 
 body.active::before{
@@ -115,6 +183,7 @@ img{
      align-items: center;
      justify-content: space-between;
      padding: var(--common-padding);
+     flex-wrap: wrap;
      /* position: fixed; */
      width: 100%;
 }
@@ -366,6 +435,7 @@ img{
 
 .main-filterBx__rightBx .statsBx .statsBx__rightBx{
      display: flex;
+     flex-wrap: wrap;
      gap: 3rem;
 }
 
@@ -412,62 +482,6 @@ img{
      gap: 1.2rem;
 }
 
-.candidatesCardContainer .cardBx .topBar > .imgBx{
-     position: relative;
-     width: 80px;
-     height: 80px;
-     border-radius: 50%;
-     overflow: hidden;
-     border: 2px solid red;
-}
-
-.candidatesCardContainer .cardBx .topBar > .imgBx img{
-     position: absolute;
-     inset: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: contain;
-}
-
-.candidatesCardContainer .cardBx .topBar .contentBx{
-     display: flex;
-     flex-direction: column;
-     gap: 0.4rem;
-}
-
-.candidatesCardContainer .cardBx .topBar .contentBx .name{
-     font-size: 2.3rem;
-}
-
-.candidatesCardContainer .cardBx .topBar .contentBx p{
-     font-size: 1.3rem;
-     color: rgba(0, 0, 0, 0.7);
-}
-
-.candidatesCardContainer .cardBx .bottomBar{
-     display: flex;
-     justify-content: space-between;
-}
-
-.candidatesCardContainer .cardBx .bottomBar .leftBx p:last-child{
-     font-weight: 600;
-     font-size: 1.3rem;
-}
-
-.candidatesCardContainer .cardBx .bottomBar .rightBx {
-     display: flex;
-     align-items: center;
-     gap: 1.7rem;
-}
-
-.candidatesCardContainer .cardBx .bottomBar .rightBx img{
-     width: 50px;
-}
-
-.candidatesCardContainer .cardBx .secondary-heading{
-     font-size: 1.3rem;
-}
-
 .connect-btn{
      display: block;
      text-align: center;
@@ -495,27 +509,41 @@ img{
 
 /* Login Page Sidebar Styling */
 .loginBxContainer{
-     position: relative;
+     position: absolute;
+     top: 0;
+     /* width: 100%; */
+     height: 100vh;
+     overflow-y: auto;
+     right: -120%;
      background: #fff;
+     transition: 0.5s;
+     z-index: 99999;
      padding: var(--common-padding);
+}
+
+.loginBxContainer .close-login-form{
+     font-size: 2.5rem;
+     float: right;
+     cursor: pointer;
 }
 
 .loginBxContainer > form{
      display: flex;
      flex-direction: column;
      gap: 1.8rem;
+     padding: 3rem 0;
 }
 
 .loginBxContainer > form > p{
      font-size: 2.4rem;
 }
 
-.loginBxContainer > form .inputBx{
-     /* background-color: red; */
-}
+/* .loginBxContainer > form .inputBx{
+     /* background-color: red;
+} */
 
 .loginBxContainer > form .inputBx input[type="text"],
-     .loginBxContainer > form .inputBx input[type="number"]{
+     .loginBxContainer > form .inputBx input[type="number"], select{
           width: 100%;
           padding: 1.2rem;
           border: 2px solid rgba(0, 0, 0, 0.07);
@@ -537,24 +565,254 @@ img{
      color: red;
 }
 
+.loginBxContainer > form .inputBx .wrapper{
+     display: flex;
+     gap: 1.3rem;
+}
+
+.loginBxContainer > form .inputBx .wrapper select{
+     width: 60px;
+     padding: 0;
+}
+
+.loginBxContainer > form .inputBx > label{
+     display: flex;
+     gap: 1rem;
+     font-size: 1.7rem;
+}
+
+.loginBxContainer > form .signup-btn{
+     text-transform: uppercase;
+     padding: 1.2rem 0;
+     background-color: #e21032;
+     cursor: pointer;
+     color: #fff;
+     font-weight: 600;
+}
+
+.loginBxContainer > form .signup-btn:hover{
+     box-shadow: 0 0.5rem 2.3rem 0 rgba(226,16,50,0.5);
+}
+
+.loginBxContainer > form .login-text{
+     text-align: center;
+     font-size: 1.6rem;
+}
+
+.loginBxContainer > form .login-text a{
+     font-weight: bold;
+     color: blue;
+}
+
+.loginBxContainer .orBx {
+     display: flex;
+     align-items: center;
+     gap: 1.2rem;
+}
+
+.loginBxContainer .orBx > p{
+     font-size: 1.5rem;
+}
+
+.loginBxContainer .orBx .line{
+     width: 100%;
+     display: block;
+     height: 2px;
+     background-color: rgba(0, 0, 0, 0.07);
+}
+
+.loginBxContainer > form .socialMediaBx{
+     text-align: center;
+}
+
+.loginBxContainer > form .socialMediaBx p{
+     font-size: 1.8rem;
+     margin-bottom: 1.6rem;
+}
+
+.loginBxContainer > form .socialMediaBx > div{
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 3.9rem;
+}
+
+.loginBxContainer > form .socialMediaBx .iconBx{
+     position: relative;
+     width: 55px;
+     height: 55px;
+     overflow: hidden;
+     cursor: pointer;
+}
+
+.loginBxContainer > form .socialMediaBx .iconBx img{
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+}
+
+/* Share Container Styling */
+.shareProfileContainer{
+     /* background: red; */
+     position: absolute;
+     background-color: #fff;
+     transition: 0.5s;
+     width: 600px;
+     height: 100vh;
+     overflow-y: auto;
+     top:0;
+     left: -100%;
+     padding: var(--common-padding);
+     display: flex;
+     display: none;
+     flex-direction: column;
+     gap: 2rem;
+     z-index: 99999999;
+}
+
+.shareProfileContainer .topBx{
+     display: flex;
+     justify-content: space-between;
+}
+
+.shareProfileContainer .topBx a, span > i{
+     font-size: 1.72rem;
+     cursor: pointer;
+     color: #000;
+}
+
+.shareProfileContainer .topBar{
+     display: flex;
+     gap: 1.2rem;
+     align-items: center;
+}
+
+.share-btn{
+     display: inline-block;
+     align-self: flex-start;
+     background-color: transparent;
+     padding: 0.3rem 1rem;
+     border: 1px solid rgba(0, 0, 0, 0.4);
+     border-radius: 0.4rem;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     margin-top: 0.2rem;
+}
+
+.share-btn:hover{
+     background-color: rgba(0, 0, 0, 0.07);
+}
+
+.share-btn > img{
+     width: 20px;
+}
+
+.shareProfileContainer .qnaBx{
+     display: flex;
+     flex-direction: column;
+     gap: 1.3rem;
+     /* background-color: red; */
+     padding: 1.6rem;
+     background-image: linear-gradient(to bottom, #f4f2f5ee , rgba(0, 255, 115, 0.2) 80%);
+}
+
+.shareProfileContainer .qnaBx h2{
+     font-size: 2.5rem;
+     margin-bottom: -0.6rem;
+}
+
+.shareProfileContainer .qnaBx p{
+     font-size: 1.5rem;
+}
+
+.shareProfileContainer .qnaBx > div {
+     display: flex;
+     gap: 1.2rem;
+     align-items: center;
+}
+
+.shareProfileContainer .qnaBx > div span{
+     display: flex;
+     align-items: center;
+     gap: 0.2rem;
+}
+
+.shareProfileContainer .qnaBx > div span img{
+     width: 16px;
+}
+
+.shareProfileContainer .qnaBx .chat-btn{
+     width: 100%;
+     background-color: rgb(0, 183, 255);
+     padding: 0.5rem 0;
+     cursor: pointer;
+     color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.4rem;
+     font-size: 1.2rem;
+     font-weight: 600;
+}
+
+.shareProfileContainer .qnaBx .chat-btn > img{
+     width: 20px;
+}
+
+.shareProfileContainer .reviewBx{
+     /* background-color: red; */
+     display: flex;
+     flex-direction: column;
+     gap: 0.8rem;
+
+}
+
+.shareProfileContainer .reviewBx h2{
+     font-size: 1.8rem;
+}
+
+.shareProfileContainer .reviewBx p{
+     font-size: 1.5rem;
+}
 
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media(max-width: 768px){
+
+     html{
+          font-size: 56%;
+     }
+
      .main-container .header .menu-toggler{
           display: flex;
      }
 
      .main-container .header .main-nav{
-          /* background-color: red; */
           display: none;
      }
 
      .main-filterBx{
-          /* background-color: red; */
           grid-template-columns: 1fr !important;
      }
 
      .main-filterBx .main-filterBx__leftBx{
           display: none;
+     }
+}
+
+@media(max-width: 450px){
+     .main-filterBx__rightBx .candidatesCardContainer .cardBx .topBar{   
+          flex-direction: column;
+     }
+
+     .loginBxContainer{
+          width: 100%;
+     }
+
+     :root{
+          --common-padding: 0.3rem 1rem;
      }
 }
